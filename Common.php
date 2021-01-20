@@ -22,7 +22,7 @@ function outputSearchnavigation(){
     echo 
     '<div class="navigationbar">
     <div class="sitelogo">
-      <img src="Images/logo.png">
+      <a href="index.php"><img src="Images/logo.png"></a>
     </div>
 
 
