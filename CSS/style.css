@@ -355,7 +355,7 @@ nav ul li a{
   hr{
     height: 1px;
     position: relative;
-    top: 450px;
+    top: 400px;
   }
 
 
@@ -579,6 +579,7 @@ h1{
   position: relative;
   top: -70px;
   text-align: center;
+  left: 40px;
 }
 .order-history ul li img{
   width: 100px;
@@ -637,8 +638,9 @@ h1{
 
 .product-buy-content ul{
   position: relative;
-  left: 320px;
+  left: 130px;
   top: 50px;
+  text-align: center;
 }
 
 
@@ -650,7 +652,7 @@ h1{
   border: none;
   width: 150px;
   height: 40px;
-  left: 140px;
+  left: 80px;
   top: -50px;
 
 }
@@ -661,6 +663,88 @@ h1{
     background: #1f2833;
     color:#ffffff;
 }
+
+.dropdown{
+  position: relative;
+  top: -150px;
+  left: 300px;
+}
+
+
+
+.Contact-form{
+  width: 1000px;
+  height: 1000px;
+  background: #ABF097;
+  top: 50px;
+  left: 230px;
+  bottom: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 70px;
+  border-radius: 5px;
+ }
+
+ .Contact-form p{
+   text-align: center;
+ }
+
+
+ .Contact-form input[type="text"], input[type="question"]{
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: grey;
+  left: 230px;
+  
+}
+
+.Contact-form input[type="text"], input[type="qemail"]
+{
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    height: 10px;
+    color: grey;
+    background-color: #f9f9f9;
+    position: relative;
+    left: 230px;
+    height: 40px;
+    font-size: 20px;
+    width: 400px;
+    border-radius: 5px;
+    
+}
+
+.ask{
+
+  position: relative;
+  background: #45A29E;
+  color:#f9f9f9;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+  height: 40px;
+  left: 330px;
+  top: -5px;
+  font-size: 20px;
+
+
+
+}
+.ask:hover
+{
+    cursor: pointer;
+    background: #1f2833;
+    color:#ffffff;
+}
+
+
 
  .footer{
    position: relative;
@@ -674,10 +758,6 @@ h1{
   
  }
 
- .quantity{
-   position: relative;
-   left: 140px;
- }
 
 
  .footer-top{
