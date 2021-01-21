@@ -1,4 +1,4 @@
-
+// The Javascript is for powering the image slideshow on the homepage
 
 var slideIndex = 1;
   showSlides(slideIndex);

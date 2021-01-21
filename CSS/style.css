@@ -1,5 +1,9 @@
 
+/* Importing the font used from google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* CSS for the entire page */
 
 *{
     
@@ -14,7 +18,7 @@
   
     
 }
-
+/* CSS for site logo */
 .sitelogo{
 
     display: block;
@@ -26,9 +30,9 @@
 
 
 }
-
+/* CSS for the body */
 body{
-  background: #f2f2f2;
+ 
   font-family: 'Open Sans', sans-serif;
   background: #1D2025;
   width: 100%;
@@ -38,7 +42,7 @@ body{
   padding-bottom: 250px;
 }
 
-
+/* CSS for the search bar */
 .search {
   width: 70%;
   height: 100%;
@@ -75,7 +79,7 @@ body{
   cursor: pointer;
   font-size: 20px;
 }
-
+/* CSS for the basket icon */
 .basket{
   margin-left: 55px;
   margin-top: 12px;
@@ -93,7 +97,7 @@ body{
   color: #f2f2f2;
 }
 
-
+/* CSS for the navigation bar */
 
 .navigationbar{
 
@@ -148,8 +152,7 @@ nav ul li a{
 
 
 
-
-
+/* CSS for the image slide show */
 .slideshow {
     width: 1280px;
     top: 30%;
@@ -159,12 +162,12 @@ nav ul li a{
     position: absolute;
   }
   
-  /* Hides the images by default */
+ 
    .Slides {
     display: none;
   }
   
-  /* Next & previous buttons */
+ 
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -180,22 +183,18 @@ nav ul li a{
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
+  
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
+  
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: grey;
   }
   
  
-
-  
-  
-  /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -213,7 +212,7 @@ nav ul li a{
     to {opacity: 1}
   }
 
-
+  /* CSS For the featured Products */
   .featured{
     width: 1200px;
     margin: auto;
@@ -271,6 +270,8 @@ nav ul li a{
     color:#f2f2f2;
     text-align: center;
   }
+  
+  /* CSS for products details */
 
   .Product-Name{
     color: #f2f2f2;
@@ -296,6 +297,7 @@ nav ul li a{
     position: relative;
     left: -80px;
   }
+/*  CSS for add to basket button */
 
   .add{
     color: #f9f9f9;
@@ -359,12 +361,7 @@ nav ul li a{
   }
 
 
-
-  .loginbox a:hover 
-{
-    color: #000000;
-
-}
+/* CSS for login box */
 
 .login{
     width: 420px;
@@ -376,6 +373,7 @@ nav ul li a{
     position: relative;
     box-sizing: border-box;
     padding: 70px;
+    border-radius: 4px;
     
 }
 
@@ -451,8 +449,7 @@ h1{
     color: #000000;
 
 }
-
-
+/* CSS for register box */
 .Register{
   width: 420px;
   height: 300px;
@@ -463,6 +460,7 @@ h1{
   position: relative;
   box-sizing: border-box;
   padding: 70px;
+  border-radius: 4px;
   
 }
 .avatar{
@@ -518,7 +516,7 @@ h1{
   
 }
 
-
+/* CSS for submit button */
 .submit
 {
     border: none;
@@ -548,7 +546,7 @@ h1{
     
 }
 
-
+/* CSS for the order history box */
 .order-history{
 
   position: relative;
@@ -584,8 +582,8 @@ h1{
 .order-history ul li img{
   width: 100px;
 }
-
-
+/* 
+CSS for checkout box */
 .checkout{
   background: #455A6D;
   position:relative;
@@ -600,6 +598,7 @@ h1{
   padding: 10px;
   color: white;
 }
+/* CSS for buttons and dropdown menu */
 
 .pay{ 
 
@@ -671,7 +670,7 @@ h1{
 }
 
 
-
+/* CSS for contact form */
 .Contact-form{
   width: 1000px;
   height: 1000px;
@@ -745,7 +744,7 @@ h1{
 }
 
 
-
+/* CSS for footer */
  .footer{
    position: relative;
    background: #2E445B;

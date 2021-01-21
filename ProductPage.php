@@ -7,6 +7,8 @@
     outputheader("QWERTY STORE | Products");
     outputSearchnavigation();
 
+    #Calling  the functions required for the page + the unique HTML code for the product listings
+
     ?>
 
 </div>
@@ -52,7 +54,7 @@
     </div>
 
 
-
+<!-- Function to output the footer -->
 <?php
     outputfooter();
 ?>

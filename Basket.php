@@ -4,7 +4,7 @@
 
     include('Common.php'); 
 	
- #Calling  the functions required for the page + the unique HTML code for the game's placeholder 
+ #Calling  the functions required for the page + the unique HTML code for the pages basket and checkout box 
 
     outputheader("QWERTY STORE | Basket");
 
@@ -49,7 +49,7 @@
 
     </div>
   </div>
-
+<!-- Function to output the footer -->
 <?php
     outputfooter();
 ?>

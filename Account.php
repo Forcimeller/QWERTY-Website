@@ -7,6 +7,8 @@
     outputheader("QWERTY STORE | Account");
     outputSearchnavigation();
 
+    #Calling  the functions required for the page + the unique HTML code for the register + login forms and order history
+
     ?>
 
 <div class="login">
@@ -50,7 +52,7 @@
     </ul>
 </div>
 
-
+<!-- Function to output the footer -->
 <?php
     outputfooter();
 ?>
