@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "CSS\grids.CSS">
+        <link rel = "stylesheet" type = "text/css" href = "CSS\slideShow.CSS">
+        <link rel = "stylesheet" type = "text/css" href = "CSS\mainStyles.CSS">
+        <link rel = "stylesheet" type = "text/css" href = "CSS\productUnit.CSS">
+        <title>Qwerty Store</title>
+    </head>
+
+    <body>
+        <div class = "pageGrid">
+            <div class = "headerGrid" id = "header">
+                <div class = "logoSpace">
+                    <img src = "Assets\logo-white.png" class = "logo">                  
+                </div>
+                <div class = searchBarGrid>
+                    <form action = "">
+                        <input type = "text" name = "searchTerm" placeholder = "SEARCH...">
+                    </form>
+                    <img src = "Assets\Search.png" height = 30px style = "padding: 10px;">
+                    <div id = "basketStatus">
+                        <img src = "Assets\Basket.png" height = 30px style = "padding: 10px;">
+                    </div>
+                    
+                </div>
+                <div class = "navBarGrid">
+                    <button class = "navButton">SPOTLIGHT_</button>
+                    <h2>|</h2>
+                    <button class = "navButton">ALL_SHIRTS_</button>
+                    <h2>|</h2>
+                    <button class = "navButton">SEARCH_</button>
+                    <h2>|</h2>
+                    <button class = "navButton">SIGN_IN_</button>
+
+                </div> 
+            </div>
+
+            <div class = "mainBodyGrid">
+                <div class = "slideshowGrid">
+                    <script src = "JavaScript\slideShow.js"></script>
+                    <script>showSlides(slideIndex);</script>
+                    <button class = "prev" onclick = "plusSlides(-1)">❮</button>
+                    
+                    <div class = "slideshow">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="Slides fade" style="display: block;">
+                            <img src="Assets\placeholder2.png" style = "width: 100%">
+                        </div>
+
+                        <div class="Slides fade" style="display: none;">
+                            <img src="Assets\placeholder333.png" style = "width: 100%">
+                        </div>
+
+                        <div class="Slides fade" style="display: none;">
+                            <img src="Assets\placeholder33.png" style = "width: 100%">
+                        </div>
+                        
+                    </div>
+
+                    <button class = "next" onclick = "plusSlides(1)">❯</button>
+                </div>
+
+                <div>
+                    <h1 class = "inPageHeader">FEATURED_SHIRTS_</h1>
+                </div>
+
+                <div class = "featureGrid" style = "padding-left: 5%; padding-right: 5%;">
+                    <div></div>
+                    <div class = "featuredProductUnitGrid">
+
+                        <div>
+                            <img src = "Assets\Shirts\CTRLZ-Grey.png">
+                        </div>
+    
+                        <div>
+                            <h1>QWE®TY CTRL + Z</h1>
+                        </div>
+    
+                        <div>
+                            <p>Original hand-sewn, ringspun shirt with signature Ctrl + Z design</p>
+                        </div>                    
+    
+                        <div>
+                            <h2>£75</h2>
+                        </div>
+    
+                        <div>
+                            <button>Add to Basket</button>
+                        </div>
+
+                    </div>
+
+                    <div class = "featuredProductUnitGrid">
+
+                        <div>
+                            <img src = "Assets\Shirts\RedHat.png">
+                        </div>
+    
+                        <div>
+                            <h1>QWE®TY Fedora</h1>
+                        </div>
+    
+                        <div>
+                            <p>Original hand-sewn, ringspun shirt with ornate, embossed, Italian velvet in the shape of a hat</p>
+                        </div>                    
+    
+                        <div>
+                            <h2>£125</h2>
+                        </div>
+    
+                        <div>
+                            <button>Add to Basket</button>
+                        </div>
+
+                    </div>
+
+                    <div class = "featuredProductUnitGrid">
+
+                        <div>
+                            <img src = "Assets\Shirts\logored.png">
+                        </div>
+    
+                        <div>
+                            <h1>QWE®TY CTRL + Z</h1>
+                        </div>
+    
+                        <div>
+                            <p>Original hand-sewn, ringspun shirt with signature Ctrl + Z design</p>
+                        </div>                    
+    
+                        <div>
+                            <h2>£75</h2>
+                        </div>
+    
+                        <div>
+                            <button>Add to Basket</button>
+                        </div>
+
+                    </div>
+
+                    <div></div>
+                </div>
+
+            </div>
+
+            <div class = "footerGrid">
+
+                <div class = "descriptionColumn">
+                    <p class = "info"> QWE®TY is an elite competitive programmer’s club with exclusive perks and privileges. 
+                        Here we sell exclusive, luxury apparel made for supporters of the club to wear. <br> 
+                        QWE®TY. Our code <i>does</i>.</p>
+                </div>
+
+                <div class = "quickLinkColumn">                
+                    <h2>Quick Links</h2>                    
+                    <ul class = "footer-links">
+                        <li><a href = "">Spotlight</a></li>
+                        <li><a href = "">Account</a></li>
+                        <li><a href = "">Contact</a></li>
+                        <li><a href = "">Basket</a></li>
+                    </ul>
+                </div>
+            
+                <div class = "socialColumn">                
+                    <h2>Socials</h2>                
+                    <ul class = "socials">                    
+                        <li><a href = "">Twitter <i class = "fab fa-twitter" aria-hidden = "true"></i></a></li>
+                        <li><a href = "">Email <i class = "far fa-envelope" aria-hidden = "true"></i></a></li>
+                        <li><a href = "">Instagram <i class = "fab fa-instagram" aria-hidden = "true"></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

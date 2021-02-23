@@ -1,0 +1,124 @@
+.productUnitGrid{
+    margin: 10px;
+    width: 290px;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto;
+    background-color: #b9b9b9;
+}
+
+.productUnitGrid img{
+    width: 290px;
+    height: auto;
+}
+
+.productUnitGrid h1{
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.productUnitGrid h2{
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-weight: normal;
+    padding: 5px;
+    margin: 0px;
+}
+
+.productUnitGrid p{
+    word-wrap: break-word;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.productUnitGrid button{
+    color: #000000;
+    background-color: #DDDDDD;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    width: 96%;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-width: 0px;
+}
+
+.productUnitGrid button:hover{
+    color: #FFFFFF;
+    background-color:  #2E445B;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-width: 0px;
+}
+
+.featuredProductUnitGrid{
+    margin: 8px;
+    width: 523px;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto;
+    background-color: #b9b9b9;
+}
+
+.featuredProductUnitGrid img{
+    height: 500px;
+    width: auto;
+}
+
+.featuredProductUnitGrid h1{
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.featuredProductUnitGrid h2{
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-weight: normal;
+    padding: 5px;
+    margin: 0px;
+}
+
+.featuredProductUnitGrid p{
+    word-wrap: break-word;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.featuredProductUnitGrid button{
+    color: #000000;
+    background-color: #DDDDDD;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    width: 98%;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-width: 0px;
+}
+
+.featuredProductUnitGrid button:hover{
+    color: #FFFFFF;
+    background-color:  #2E445B;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-width: 0px;
+}

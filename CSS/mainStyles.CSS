@@ -1,0 +1,144 @@
+/* Sets the default margin size to 0*/
+*{
+    padding: 0;
+}
+
+/* Sets the background attributes for all standard bodies*/
+body{
+    background-color: #1D2025;
+    margin: 0;
+    overflow: auto;
+}
+
+.logoSpace{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-color: #2a3d52;
+}
+
+.logo{
+    height: 50px; 
+    padding: 25px;
+}
+
+.searchBarGrid input[type = text]{
+    color: #FFFFFF;
+    background-color: #2E445B;
+    background-image: url('../Assets/Search.png');
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 5px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    border-width: 0px;
+    padding-left: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    font-size: 30px;
+    text-indent: 10px;
+}
+
+.searchBarGrid input:focus{
+    outline: none;
+}
+
+.navBarGrid h2{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 3px;
+    margin: 0px;
+    display: inline;
+}
+
+.navButton{
+    color: #FFFFFF;
+    background-color: #455A6D;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 3px;
+    margin: 0px;
+    display: inline;
+    border-width: 0px;
+}
+
+.navButton:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.inPageHeader{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    font-size: 25pt;
+    text-align: center;
+    margin: 15px;
+}
+
+.sideBar{
+    background-color: #455A6D;
+    margin: 15px;
+    margin-bottom: 0px;
+    padding: 15px;
+    height: 650px;
+}
+
+.sideBar h1{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.sideBar button{
+    color: #000000;
+    background-color: #DDDDDD;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    font-weight: bold;
+    width: 96%;
+    text-align: left;
+    padding: 7px;
+    margin: 5px;
+    border-width: 0px;
+}
+
+.descriptionColumn{
+    color: #869bae;
+    word-wrap: break-word;
+    padding-right: 20px;
+}
+
+.quickLinkColumn{
+    color: #869bae;
+    text-align: left;
+}
+
+.socialColumn{
+    color: #869bae;
+    text-align: left;
+}
+
+.footerGrid li a{
+    color: #869bae;
+    left: 10px;
+}
+
+.footerGrid ul{
+    color: #869bae;
+    left: 10px;
+    margin: 3px;
+}
+
+.footerGrid h2{
+    margin: 2px;
+}
