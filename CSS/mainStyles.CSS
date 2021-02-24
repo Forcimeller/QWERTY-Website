@@ -10,6 +10,10 @@ body{
     overflow: auto;
 }
 
+button:focus{
+    outline: none;
+}
+
 .logoSpace{
     grid-column: 1;
     grid-row: 1 / span 2;
@@ -73,9 +77,6 @@ body{
     box-shadow: 0px 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.navButton:focus{
-    outline: none;
-}
 
 .deadNavButton{
     color: #000000;
@@ -91,10 +92,6 @@ body{
     margin: 0px;
     display: inline;
     border-width: 0px;
-}
-
-.deadNavButton:focus{
-    outline: none;
 }
 
 .inPageHeader{
