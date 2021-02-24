@@ -64,7 +64,7 @@ function pageHeader($page, $user){//function for page header & navigation bar
             echo '"deadNavButton" id = "' . $displayedLinkNames[$i] . '">' . $displayedLinkNames[$i] . '</button>';
         else {
             echo '"navButton"';
-            echo ' id = "' . $displayedLinkNames[$i] . '" onclick = window.location.replace("' .  $linkDestinations[$i] . '")>' . $displayedLinkNames[$i] . '</button>';
+            echo ' id = "' . $displayedLinkNames[$i] . '" onclick = location.href="' .  $linkDestinations[$i] . '">' . $displayedLinkNames[$i] . '</button>';
         }
         echo'   
             <h2>|</h2>
