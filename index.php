@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" type = "text/css" href = "CSS\grids.CSS">
-        <link rel = "stylesheet" type = "text/css" href = "CSS\slideShow.CSS">
-        <link rel = "stylesheet" type = "text/css" href = "CSS\mainStyles.CSS">
-        <link rel = "stylesheet" type = "text/css" href = "CSS\productUnit.CSS">
-        <title>Qwerty Store</title>
-    </head>
+<?php
+    //Include the PHP functions to be used on the page 
+    include('common.php'); 
 
-    <body>
-        <div class = "pageGrid">
-            <div class = "headerGrid" id = "header">
-                <div class = "logoSpace">
-                    <img src = "Assets\logo-white.png" class = "logo">                  
-                </div>
-                <div class = searchBarGrid>
-                    <form action = "">
-                        <input type = "text" name = "searchTerm" placeholder = "SEARCH...">
-                    </form>
-                    <img src = "Assets\Search.png" height = 30px style = "padding: 10px;">
-                    <div id = "basketStatus">
-                        <img src = "Assets\Basket.png" height = 30px style = "padding: 10px;">
-                    </div>
-                    
-                </div>
-                <div class = "navBarGrid">
-                    <button class = "navButton" href = "">SPOTLIGHT_</button>
-                    <h2>|</h2>
-                    <button class = "navButton" href = "">ALL_SHIRTS_</button>
-                    <h2>|</h2>
-                    <button class = "navButton" href = "">SEARCH_</button>
-                    <h2>|</h2>
-                    <button class = "navButton" href = "">SIGN_IN_</button>
-
-                </div> 
-            </div>
+    //Output header and navigation 
+    outputHTMLHeader("QWERTY | SPOTLIGHT_");
+    pageHeader("SPOTLIGHT_", "guest");
+?>
 
             <div class = "mainBodyGrid">
                 <div class = "slideshowGrid">
@@ -147,33 +116,7 @@
 
             </div>
 
-            <div class = "footerGrid">
-
-                <div class = "descriptionColumn">
-                    <p class = "info"> QWE®TY is an elite competitive programmer’s club with exclusive perks and privileges. 
-                        Here we sell exclusive, luxury apparel made for supporters of the club to wear. <br> 
-                        QWE®TY. Our code <i>does</i>.</p>
-                </div>
-
-                <div class = "quickLinkColumn">                
-                    <h2>Quick Links</h2>                    
-                    <ul class = "footer-links">
-                        <li><a href = "">Spotlight</a></li>
-                        <li><a href = "">Account</a></li>
-                        <li><a href = "">Contact</a></li>
-                        <li><a href = "">Basket</a></li>
-                    </ul>
-                </div>
-            
-                <div class = "socialColumn">                
-                    <h2>Socials</h2>                
-                    <ul class = "socials">                    
-                        <li><a href = "">Twitter <i class = "fab fa-twitter" aria-hidden = "true"></i></a></li>
-                        <li><a href = "">Email <i class = "far fa-envelope" aria-hidden = "true"></i></a></li>
-                        <li><a href = "">Instagram <i class = "fab fa-instagram" aria-hidden = "true"></i></a></li>
-                    </ul>  
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+<?php
+    //Outputs the page footer
+    pageFooter(); 
+?>
