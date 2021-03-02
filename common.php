@@ -1,15 +1,5 @@
 <?php
 
-//Include libraries
-require __DIR__ . '/vendor/autoload.php';
-    
-//Create instance of MongoDB client
-$mongoClient = (new MongoDB\Client);
-
-//Select a database
-$db = $mongoClient->Qwerty;
-
-
 function outputHTMLHeader($pageTitle){//Function to print the HTML headder for all webpages
     echo'
     <!DOCTYPE html>
@@ -36,8 +26,9 @@ function pageHeader($page, $user){//function for page header & navigation bar
                     <img src = "Assets\logo-white.png" class = "logo">                  
                 </div>
                 <div class = searchBarGrid>
-                    <form action = "">
-                        <input type = "text" name = "searchTerm" placeholder = "SEARCH...">
+                    <script src = "Javascript\search.js"></script>
+                    <form action = "search-results.php" method = "GET">
+                        <input type = "text" name = "tags" placeholder = "SEARCH...">
                     </form>
                     <img src = "Assets\Search.png" height = 30px style = "padding: 10px;">
                     <div id = "basketStatus">
