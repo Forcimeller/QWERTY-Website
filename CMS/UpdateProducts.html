@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List all Products</title>
+    </head>
+    <body>
+      
+        <div id="products"></div>
+        <div id="ServerContent"></div>
+
+
+        <script>
+            
+                //Create request object 
+                let request = new XMLHttpRequest();
+
+                //Create event handler that specifies what should happen when server responds
+                request.onload = function(){
+                    if(request.status === 200){//Check HTTP status code
+                        //Get data from server
+                        let responseData = request.responseText;
+
+                        //Add data to page
+                        document.getElementById("products").innerHTML = responseData;
+                    }
+                    else
+                        alert("Error communicating with server: " + request.status);
+                };
+
+                //Set up request with HTTP method and URL 
+                request.open("GET", "UpdateProductForm.php");
+
+                //Send request
+                request.send();
+            
+        </script>
+    </body>
+</html>

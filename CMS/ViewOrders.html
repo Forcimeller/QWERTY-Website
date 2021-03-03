@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <div id="Orders"></div>
+        <div id="ServerContent"></div>
+  <script>
+    
+        //Create request object 
+        let request = new XMLHttpRequest();
+
+        //Create event handler that specifies what should happen when server responds
+        request.onload = function(){
+            if(request.status === 200){//Check HTTP status code
+                //Get data from server
+                let responseData = request.responseText;
+
+                //Add data to page
+                document.getElementById("ServerContent").innerHTML = responseData;
+            }
+            else
+                alert("Error communicating with server: " + request.status);
+        };
+
+        //Set up request with HTTP method and URL 
+        request.open("GET", "vieworders.php");
+
+        //Send request
+        request.send();
+    
+</script>
+</body>
+</html>
+
+
+
+</body>
+</html>
