@@ -1,5 +1,4 @@
 <?php
-//function search(){
 //Include libraries
 require __DIR__ . '/../vendor/autoload.php';
     
@@ -36,7 +35,3 @@ $jsonStr = substr($jsonStr, 0, strlen($jsonStr) - 1);
 
 //Close array
 $jsonStr .= ']';
-
-//Echo final string
-//echo $jsonStr;
-//}
