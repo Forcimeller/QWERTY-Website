@@ -135,8 +135,8 @@
 }
 
 .singleItemGrid img{
-    width: 290px;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .singleItemGrid h1{

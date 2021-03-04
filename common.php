@@ -26,9 +26,9 @@ function pageHeader($page, $user){//function for page header & navigation bar
                     <img src = "Assets\logo-white.png" class = "logo">                  
                 </div>
                 <div class = searchBarGrid>
-                    <script src = "Javascript\search.js"></script>
+                    
                     <form action = "search-results.php" method = "GET">
-                        <input type = "text" name = "tags" placeholder = "SEARCH...">
+                        <input type = "text" name = "term" placeholder = "SEARCH...">
                     </form>
                     <img src = "Assets\Search.png" height = 30px style = "padding: 10px;">
                     <div id = "basketStatus">

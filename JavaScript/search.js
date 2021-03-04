@@ -1,3 +1,4 @@
+/*
 window.onload = implementSearch();
 
 //Downloads JSON description of products from server
@@ -17,9 +18,10 @@ function implementSearch(){
     };
 
     //Set up request and send it
-    request.open("GET", "AJAX/productIndexedSearch.php?tags=Red");
+    request.open("GET", "AJAX/productIndexedSearch.php?term=red");
     request.send();
 }
+*/
 
 //Loads products into page
 function displayProducts(productJSONs){
