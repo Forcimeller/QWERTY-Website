@@ -17,15 +17,15 @@
 
                         <!-- Full-width images with number and caption text -->
                         <div class="Slides fade" style="display: block;">
-                            <img src="Assets\placeholder2.png" style = "width: 100%">
+                            <img src="Assets\Slideshow\Slideshow-1.png" style = "width: 100%">
                         </div>
 
                         <div class="Slides fade" style="display: none;">
-                            <img src="Assets\placeholder333.png" style = "width: 100%">
+                            <img src="Assets\Slideshow\Slideshow-2.png" style = "width: 100%">
                         </div>
 
                         <div class="Slides fade" style="display: none;">
-                            <img src="Assets\placeholder33.png" style = "width: 100%">
+                            <img src="Assets\Slideshow\Slideshow-3.png" style = "width: 100%">
                         </div>
                         
                     </div>
