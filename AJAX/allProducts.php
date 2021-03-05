@@ -8,12 +8,6 @@ $mongoClient = (new MongoDB\Client);
 //Select a database
 $db = $mongoClient->Qwerty;
 
-//Extract the data that was sent to the server
-//$search_string = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
-
-//Create a PHP array with our search criteria
-//$findCriteria = [
-
 //Find all of the customers that match  this criteria
 $cursor = $db->Shirts->find();
 

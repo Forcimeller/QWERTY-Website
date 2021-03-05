@@ -12,11 +12,12 @@
                 <div class = "loginContainer">
                     <div></div>
                     
+                    <script src = "JavaScript\registration.js"></script>
                     <div class = "loginGrid">
                         <div class = "banner">
                             <img src = "Assets\logo-white.png" class = "loginBanner">
                         </div>
-                        <form action = "" id = "newUser">
+                        <form action = "registerNew()" id = "newUser">
                             <label for = "newUsrName"> Add email </label><br>
                             <input type = "text" id = "newUsrName" name = "newUsrName" autofocus><br>
                             
@@ -42,7 +43,7 @@
                             <div><p class = "userMessage" id  = "usrMsg"></p></div>
 
                         <!--Butons for navigating the site-->
-                        <button class = "loginButton" action = ""> Submit </button>
+                        <button class = "loginButton" onclick = registerNew()> Submit </button>
                         <a class = "backButton" href = "accounts.php"> &lt Back </a>
                     </div>
                     

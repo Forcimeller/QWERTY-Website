@@ -11,7 +11,7 @@
             <div class = "mainBodyGrid">
                 <div class = "loginContainer">
                     <div></div>
-                    
+                    <script src = "JavaScript\login.js"></script>
                     <div class = "loginGrid">
                         <div class = "banner">
                             <img src = "Assets\logo-white.png" class = "loginBanner">
@@ -26,7 +26,7 @@
                         <div><p class = "userMessage" id  = "usrMsg"></p></div>
 
                         <!--Butons for navigating the site-->
-                        <button class = "loginButton" action = ""> Submit </button>
+                        <button class = "loginButton" onclick = "login()"> Submit </button>
                         <a class = "backButton" href = "accounts.php"> &lt Back </a>
                     </div>
                     
