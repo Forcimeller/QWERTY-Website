@@ -7,6 +7,11 @@
     pageHeader("MY_ACCOUNT_", "");
 
 ?>
+            <script>
+            if(sessionStorage.loggedInUserId !== undefined){
+                location.href = "accounts-settings.php";
+            }
+            </script>
 
             <div class = "mainBodyGrid">
                 <div class = "loginContainer">

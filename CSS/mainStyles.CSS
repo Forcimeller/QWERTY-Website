@@ -149,7 +149,7 @@ button:focus{
 
 .sideBarButton:hover{
     color: #FFFFFF;
-    background-color: #2E445B;
+    background-color: #3a5470;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15pt;
     font-weight: bold;
@@ -256,9 +256,39 @@ label {
     color: red;
     font-size: 12pt;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: normal;
     text-align: center;
 }
+
+
+.accountSettingsGrid form{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto ;
+    grid-template-columns: 100%;
+    margin-left: 1%;
+    padding: 10px;
+    align-self: center;
+    background-color: #2E445B;
+    grid-row-gap: 10px;
+}
+
+.accountSettingsGrid h2{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+.accountSettingsGrid p{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    text-align: left;
+    margin: 0px;
+}
+
 
 .backButton:hover {
     background-color: #1b293a;

@@ -78,6 +78,15 @@
     background-color: #2E445B;
 }
 
+.accountSettingsGrid{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto ;
+    grid-template-columns: 100%;
+    align-self: center;
+    background-color: #00000000;
+    grid-row-gap: 10px;
+}
+
 .footerGrid{
     display: grid;
     grid-template-rows: auto;
