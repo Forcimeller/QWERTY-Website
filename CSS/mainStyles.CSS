@@ -25,6 +25,10 @@ button:focus{
     padding: 25px;
 }
 
+.banner{
+    background-color: #2a3d52;
+}
+
 .searchBarGrid input[type = text]{
     color: #FFFFFF;
     background-color: #2E445B;
@@ -168,6 +172,89 @@ button:focus{
     padding: 7px;
     margin: 5px;
     border-width: 0px;
+}
+
+.loginBanner{
+    align-items: center;
+    background-color: #2a3d52;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.loginButton{
+    border: none;
+    color: White;
+    background-color: #455A6D; 
+    width: auto;
+    padding: 11px;
+    text-decoration: none;
+    display: block;
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.5s;
+    cursor: pointer;     
+}
+
+.loginButton:hover{
+    background-color: #1b293a;
+    color: White;
+    text-align: center;
+}
+
+.loginGrid hr{
+    height: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom-style: inset;
+
+}
+
+.backButton{
+    border: none;
+    color: White;
+    background-color: #455A6D; 
+    width: auto;
+    padding: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    text-align: center;   
+}
+
+input[type=text], input[type=password],select {
+    width: 100%;
+    padding: 6px 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+    color: White;
+    background-color: #263546;
+    font-size: 15pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    width: 100%;
+    display: inline-block;
+    margin: 1px;
+    color: White;
+    font-size: 13pt;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: Left;
+}
+
+.backButton:hover {
+    background-color: #1b293a;
+    text-align: center;
 }
 
 .descriptionColumn{

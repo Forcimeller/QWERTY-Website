@@ -9,23 +9,50 @@ $mongoClient = (new MongoDB\Client);
 $db = $mongoClient->Qwerty;
 
 //Extract the data that was sent to the server
-$search_string = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+$idA = filter_input(INPUT_POST, 'idA', FILTER_SANITIZE_STRING);
+$idB = filter_input(INPUT_POST, 'idB', FILTER_SANITIZE_STRING);
+$idC = filter_input(INPUT_POST, 'idC', FILTER_SANITIZE_STRING);
 
-//Create a PHP array with the search criterion
-$findCriteria = [
-    '_id' => new MongoDB\BSON\ObjectID($search_string)
- ];
+//Create a PHP array with the search criteria
+/*
+$findCriteriaA = [
+    '$text' => [ '$search' => $idA] 
+];*/
 
-//Find all shirts that match  this criteria
-$cursor = $db->Shirts->find($findCriteria);
+$findCriteriaB = [
+    '_id' => new MongoDB\BSON\ObjectID($idB)
+];
 
-//Initialise the JSON string
-$jsonStr = "";
+$findCriteriaC = [
+    '_id' => new MongoDB\BSON\ObjectID($idC)
+];
 
-//Format the response into a JSON readable in JavaScript
-foreach ($cursor as $shirt){
-    $jsonStr = '{"_id" : "'. $shirt['_id'] .'", "shirtName" : "'. $shirt['shirtName'] .'","colour" : "'. $shirt['colour'] .'","price" : '. $shirt['price'] .',"stockQuantity" : '. $shirt['stockQuantity'] .',"description" : "'. $shirt['description'] .'","img" : "'. $shirt['img'] .'"},';
+//Find all shirts that match each criteria
+/*$cursorA = $db->Shirts->find($findCriteriaA);*/
+$cursorB = $db->Shirts->find($findCriteriaB);
+$cursorC = $db->Shirts->find($findCriteriaC);
+
+//Initialise the JSON strings
+$jsonStrA = "[";
+$jsonStrB = "";
+$jsonStrC = "";
+
+//Format the response into JSONs readable in JavaScript
+/*foreach ($cursorA as $shirt){
+    $jsonStrA .= '{"_id" : "'. $shirt['_id'] .'", "shirtName" : "'. $shirt['shirtName'] .'","colour" : "'. $shirt['colour'] .'","price" : '. $shirt['price'] .',"stockQuantity" : '. $shirt['stockQuantity'] .',"description" : "'. $shirt['description'] .'","img" : "'. $shirt['img'] .'"},';
+}*/
+
+foreach ($cursorB as $shirt){
+    $jsonStrB = '{"_id" : "'. $shirt['_id'] .'", "shirtName" : "'. $shirt['shirtName'] .'","colour" : "'. $shirt['colour'] .'","price" : '. $shirt['price'] .',"stockQuantity" : '. $shirt['stockQuantity'] .',"description" : "'. $shirt['description'] .'","img" : "'. $shirt['img'] .'"},';
 }
 
-//Remove last comma
-$jsonStr = substr($jsonStr, 0, strlen($jsonStr) - 1);
+foreach ($cursorC as $shirt){
+    $jsonStrC = '{"_id" : "'. $shirt['_id'] .'", "shirtName" : "'. $shirt['shirtName'] .'","colour" : "'. $shirt['colour'] .'","price" : '. $shirt['price'] .',"stockQuantity" : '. $shirt['stockQuantity'] .',"description" : "'. $shirt['description'] .'","img" : "'. $shirt['img'] .'"},';
+}
+
+//Remove last comma from JSONs
+$jsonStrA = substr($jsonStrA, 0, strlen($jsonStrA) - 1);
+$jsonStrB = substr($jsonStrB, 0, strlen($jsonStrB) - 1);
+$jsonStrC = substr($jsonStrC, 0, strlen($jsonStrC) - 1);
+
+$jsonStrA .= "]";

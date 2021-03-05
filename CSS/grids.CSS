@@ -62,6 +62,22 @@
     align-self: center;
 }
 
+.loginContainer{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 30% auto;
+    margin-top: 5%;
+}
+
+.loginGrid{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto;
+    padding: 10px;
+    grid-row-gap: 15px;
+    background-color: #2E445B;
+}
+
 .footerGrid{
     display: grid;
     grid-template-rows: auto;

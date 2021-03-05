@@ -30,7 +30,6 @@ function pageHeader($page, $user){//function for page header & navigation bar
                     <form action = "search-results.php" method = "GET">
                         <input type = "text" name = "term" placeholder = "SEARCH...">
                     </form>
-                    <img src = "Assets\Search.png" height = 30px style = "padding: 10px;">
                     <div id = "basketStatus">
                         <img src = "Assets\Basket.png" height = 30px style = "padding: 10px;">
                     </div>
@@ -39,14 +38,9 @@ function pageHeader($page, $user){//function for page header & navigation bar
                 <div class = "navBarGrid">
     ';
 
-    if ($user == "guest"){
-        $user = "SIGN_IN_";
-    } else {
-        $user = "MY_QWERTY_ACCOUNT_";
-    }
 
-    $displayedLinkNames = array("SPOTLIGHT_", "ALL_SHIRTS_", "SEARCH_", $user);
-    $linkDestinations = array("index.php", "all-shirts.php", "", "account.php");
+    $displayedLinkNames = array("SPOTLIGHT_", "ALL_SHIRTS_", "SEARCH_", "MY_ACCOUNT_");
+    $linkDestinations = array("index.php", "all-shirts.php", "", "accounts.php");
 
     
     for($i = 0; $i < count($displayedLinkNames); $i++){
