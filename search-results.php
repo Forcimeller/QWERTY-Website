@@ -6,6 +6,19 @@
     //Output header and navigation 
     outputHTMLHeader("QWERTY | SEARCH_");
     pageHeader("SEARCH_", "guest");
+
+    echo '
+            <script type = \'module\'>
+
+            //Import recommender class
+            import {Recommender} from \'./JavaScript/recommender.js\';
+
+            //Create recommender object - it loads its state from local storage
+            let recommender = new Recommender();
+
+                //Add the search keyword to the recommender
+                recommender.addKeyword("'.$search_string.'");
+            </script>';
 ?>
             <div class = "mainBodyGrid">
                 <div class = "productPageGrid">

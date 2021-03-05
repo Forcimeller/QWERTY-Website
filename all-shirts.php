@@ -37,7 +37,7 @@
                     let rows = 1;
                 
                     //Populate Grid with products     
-                               
+
                         if (items > 4){
                             rows = Math.ceil(items/4);
                             let gridString = "";
@@ -177,8 +177,9 @@
 
                     }
 
-                </script>
-            </div>
+                </script>';
+
+    echo'    </div>
         </div>';
     //Outputs the page footer
     pageFooter(); 
