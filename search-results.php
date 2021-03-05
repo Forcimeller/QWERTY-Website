@@ -50,7 +50,7 @@
                         }
                 
                         for(let i = 0; i < items || i < 4; i++){
-                            grid.innerHTML += \'<div class = "productUnitGrid" id = "\'+ products[i]._id +\'">\' +
+                            grid.innerHTML += \'<div onclick = alert("item.html") class = "productUnitGrid" id = "\'+ products[i]._id +\'">\' +
                                 \'<img src = "\'+ products[i].img +\'">\' +
                                 \'<h1>\'+ products[i].shirtName +\' - \'+ products[i].colour +\'</h1>\' +
                                 \'<p>\'+ products[i].description +\'</p>\' +
@@ -68,10 +68,10 @@
                     let shirts = JSON.parse(\''.$jsonStr.'\');                                
                     
                     sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
-                                        "<button onclick = lowTOhighPrice()>Price (Lowest First)</button> \n" +
-                                        "<button onclick = highTOlowPrice()>Price (Highest First)</button> \n" +
-                                        "<button onclick = aTOzAlphabetical()>Name (A to Z)</button> \n" +
-                                        "<button onclick = zTOaAlphabetical()>Name (Z to A)</button> \n";
+                                        "<button class = \'sideBarButton\' onclick = lowTOhighPrice()>Price (Lowest First)</button> \n" +
+                                        "<button class = \'sideBarButton\' onclick = highTOlowPrice()>Price (Highest First)</button> \n" +
+                                        "<button class = \'sideBarButton\' onclick = aTOzAlphabetical()>Name (A to Z)</button> \n" +
+                                        "<button class = \'sideBarButton\' onclick = zTOaAlphabetical()>Name (Z to A)</button> \n";
                     
                     function aTOzAlphabetical(){
                         function comparison(a, b) {
@@ -87,6 +87,14 @@
                         }
                         shirts.sort(comparison);
                         displayItems();
+
+                        //Make the A to Z button unclickable
+                        sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
+                                            "<button class = \'sideBarButton\' onclick = lowTOhighPrice()>Price (Lowest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = highTOlowPrice()>Price (Highest First)</button> \n" +
+                                            "<button class = \'clickedButton\' disabled>Name (A to Z)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = zTOaAlphabetical()>Name (Z to A)</button> \n";
+
                     }
                     
                     function zTOaAlphabetical(){
@@ -103,16 +111,35 @@
                         }
                         shirts.sort(comparison);
                         displayItems();
+
+                        //Make the Z to A button unclickable
+                        sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
+                                            "<button class = \'sideBarButton\' onclick = lowTOhighPrice()>Price (Lowest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = highTOlowPrice()>Price (Highest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = aTOzAlphabetical()>Name (A to Z)</button> \n" +
+                                            "<button class = \'clickedButton\' disabled>Name (Z to A)</button> \n";
                     }
                     
                     function highTOlowPrice(){
                         shirts.sort(function(a, b){return b.price - a.price});
                         displayItems();
+                        //Make the High to Low button unclickable
+                        sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
+                                            "<button class = \'sideBarButton\' onclick = lowTOhighPrice()>Price (Lowest First)</button> \n" +
+                                            "<button class = \'clickedButton\' disabled>Price (Highest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = aTOzAlphabetical()>Name (A to Z)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = zTOaAlphabetical()>Name (Z to A)</button> \n";
                     }
                     
                     function lowTOhighPrice(products){
                         shirts.sort(function(a, b){return a.price - b.price});
                         displayItems();
+                        //Make the Low to High button unclickable
+                        sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
+                                            "<button class = \'clickedButton\' disabled>Price (Lowest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = highTOlowPrice()>Price (Highest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = aTOzAlphabetical()>Name (A to Z)</button> \n" +
+                                            "<button class = \'sideBarButton\' onclick = zTOaAlphabetical()>Name (Z to A)</button> \n";
                     }
 
                     function displayItems(){//Shows Sorted items on product grid
@@ -144,10 +171,10 @@
 
                 }else{
                         sidebar.innerHTML = "<h1>SORT_BY_</h1> \n" +
-                                            "<button disabled>Price (Lowest First)</button> \n" +
-                                            "<button disabled>Price (Highest First)</button> \n" +
-                                            "<button disabled>Name (A to Z)</button> \n" +
-                                            "<button disabled>Name (Z to A)</button> \n";
+                                            "<button class = \'sideBarButton\' disabled>Price (Lowest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' disabled>Price (Highest First)</button> \n" +
+                                            "<button class = \'sideBarButton\' disabled>Name (A to Z)</button> \n" +
+                                            "<button class = \'sideBarButton\' disabled>Name (Z to A)</button> \n";
 
                     }
 
