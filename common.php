@@ -46,7 +46,7 @@ function pageHeader($page, $user){//function for page header & navigation bar
     }
 
     $displayedLinkNames = array("SPOTLIGHT_", "ALL_SHIRTS_", "SEARCH_", $user);
-    $linkDestinations = array("index.php", "all-shirts.php", "search-results.php", "account.php");
+    $linkDestinations = array("index.php", "all-shirts.php", "", "account.php");
 
     
     for($i = 0; $i < count($displayedLinkNames); $i++){

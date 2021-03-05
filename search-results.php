@@ -22,9 +22,8 @@
                     </div>
                     
 <?php
-
-    echo'           
-                <script>
+    //Script for loading products
+    echo'       <script>
                     let productJSONs = \''.$jsonStr.'\';
                     let grid = document.getElementById("productGrid");
 
@@ -50,7 +49,7 @@
                         }
                 
                         for(let i = 0; i < items || i < 4; i++){
-                            grid.innerHTML += \'<div onclick = alert("item.html") class = "productUnitGrid" id = "\'+ products[i]._id +\'">\' +
+                            grid.innerHTML += \'<div onclick = location.href="item.php?id=\'+ products[i]._id +\'" class = "productUnitGrid" id = "\'+ products[i]._id +\'">\' +
                                 \'<img src = "\'+ products[i].img +\'">\' +
                                 \'<h1>\'+ products[i].shirtName +\' - \'+ products[i].colour +\'</h1>\' +
                                 \'<p>\'+ products[i].description +\'</p>\' +
@@ -59,9 +58,10 @@
                             \'</div>\n\'; 
                         }
                     }
-                </script>
-
-                <script>
+                </script>';
+    
+    //Script for sorting products
+    echo'        <script>
                 let sidebar = document.getElementById("sidebar");
 
                 if (\''.$jsonStr.'\' !== "]"){
@@ -159,7 +159,7 @@
                     
                         //Populate Grid with products
                         for(let i = 0; i < items || i < 4; i++){
-                            grid.innerHTML += \'<div class = "productUnitGrid" id = "\'+ shirts[i]._id +\'">\' +
+                            grid.innerHTML += \'<div onclick = location.href="item.php?id=\'+ shirts[i]._id +\'" class = "productUnitGrid" id = "\'+ shirts[i]._id +\'">\' +
                                 \'<img src = "\'+ shirts[i].img +\'">\' +
                                 \'<h1>\'+ shirts[i].shirtName +\' - \'+ shirts[i].colour +\'</h1>\' +
                                 \'<p>\'+ shirts[i].description +\'</p>\' +
