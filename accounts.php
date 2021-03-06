@@ -8,7 +8,7 @@
 
 ?>
             <script>
-            if(sessionStorage.loggedInUserId !== undefined){
+            if(sessionStorage.loggedInUserId !== ""){
                 location.href = "accounts-settings.php";
             }
             </script>

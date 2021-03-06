@@ -261,7 +261,7 @@ label {
 }
 
 
-.accountSettingsGrid form{
+.accountSettingsGrid div{
     display: grid;
     grid-template-rows: auto auto auto auto auto auto auto auto ;
     grid-template-columns: 100%;

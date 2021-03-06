@@ -43,7 +43,7 @@ function getID(email, usrPassword){
 
             //Add data to session storage
             sessionStorage.loggedInUserId = responseData;
-
+            location.href = "accounts.php";
         }
         else
             alert("Error communicating with server: " + request.status);
