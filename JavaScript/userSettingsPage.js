@@ -2,6 +2,7 @@ let userJSON;
 
 //Sets all of the relevant pageDetails
 const pageContent = document.getElementById("content");
+const settingsGrid = document.getElementById("accountSettingsGrid");
 const sideBarContent = document.getElementById("sidebarContent");
 const pageTitle = document.getElementById("pageTitle");
 const currentEmailParagraph = document.getElementById("currentEmail");
@@ -148,19 +149,59 @@ function deleteAccount(){
 
 }
 
+//JSON Strings for loadOrderHistoryPage() function
+let userOrderJSON = ""; 
+let shirtJSON = "";
 
 function loadOrderHistoryPage(){
     sideBarContent.innerHTML = "<h1>OPTIONS_</h1> \n" +
                                 "<button class = 'sideBarButton' onclick = 'loadAccountSettingsPage()'> ACCOUNT_SETTINGS_ </button> \n" +
                                 "<button class = 'clickedButton' disabled> ORDER_HISTORY_ </button> \n" +
                                 "<button class = 'sideBarButton' onclick = 'signOut()'> SIGN_OUT_ </button> \n";
+    
+    pageTitle.innerHTML = 'ORDER_HISTORY_ \n';
+    settingsGrid.innerHTML = "";
+    
+    getUserOrder();
+
+    if (userOrderJSON === ""){
+        pageContent.innerHTML += '<h3 class = "orderH3">No orders yet...</h3>'
+    }else{
+        let orders = JSON.parse(userOrderJSON);
+        let ultimateHTMLString = "";
+
+        
+
+        for(let i = 0; i < orders.length; i++){
+            console.log(orders.length);
+            let orderHTMLString = "";
+            let order = orders[i];
+
+            orderHTMLString += '<div> \n' +
+                                        '<h1 class = "orderH1">ORDER NUMBER: '+ order._id +'</h1> \n' +
+                                        '<h3 class = "orderH3">DATE: '+ order.date +'</h3> \n' +
+                                        '<h3 class = "orderH3">Order total: '+ order.basketToatal +'</h3> \n' +
+                                        '<h3 class = "orderH3">STATUS: '+ order.status +'</h3> \n' +
+                                        '<h3 class = "orderH3">TRACKING NUMBER: '+ order.trackingNumber +'</h3> \n' +
+                                        '<h1 class = "orderH1">ITEMS:</h1> \n';
+
+            for(let j = 0; i < order.items.length; i++){
+                getShirtSummary(order.items[i].itemID);
+                shirt = JSON.parse(shirtJSON)
+                orderHTMLString += '<p>'+ order.items[i].quantity +' x '+ shirt.shirtName +', '+ shirt.colour +' | £'+ shirt.price +'</p> \n';
+            }
+            orderHTMLString += '</div> \n'
+            ultimateHTMLString += orderHTMLString;
+        }
+        settingsGrid.innerHTML += ultimateHTMLString 
+    }
+
+    settingsGrid.innerHTML += '</div> \n </div>';
+
 }
 
 function loadAccountSettingsPage(){
-    sideBarContent.innerHTML = "<h1>OPTIONS_</h1> \n" +
-                                "<button class = 'clickedButton' disabled> ACCOUNT_SETTINGS_ </button> \n" +
-                                "<button class = 'sideBarButton' onclick = 'loadOrderHistoryPage()'> ORDER_HISTORY </button> \n" +
-                                "<button class = 'sideBarButton' onclick = 'signOut()'> SIGN_OUT_ </button> \n";
+   location.href = "accounts-settings.php";
 }
 
 function fillSettingsPage(){
@@ -221,6 +262,54 @@ function implementChange(field, value){
 
     //Send request
     request.send("id=" + sessionStorage.loggedInUserId + "&field=" + field + "&value=" + value);
+}
+
+function getShirtSummary(id){
+    //Create request object 
+    let request = new XMLHttpRequest();
+
+    //Create event handler that specifies what should happen when server responds
+    request.onload = () => {
+        //Check HTTP status code
+        if(request.status === 200){
+            //Get data from server
+            let responseData = request.responseText;
+            shirtJSON = responseData;
+        }else
+            alert("Error communicating with server: " + request.status);
+
+    };
+
+    //Set up request with HTTP method and URL 
+    request.open("POST", "AJAX/singleProductSummary.php", false);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    //Send request
+    request.send("id=" + id);
+}
+
+function getUserOrder(){
+    //Create request object 
+    let request = new XMLHttpRequest();
+
+    //Create event handler that specifies what should happen when server responds
+    request.onload = () => {
+        //Check HTTP status code
+        if(request.status === 200){
+            //Get data from server
+            let responseData = request.responseText;
+            userOrderJSON = responseData;
+        }else
+            alert("Error communicating with server: " + request.status);
+
+    };
+
+    //Set up request with HTTP method and URL 
+    request.open("POST", "AJAX/pullUserOrders.php", false);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    //Send request
+    request.send("id=" + sessionStorage.loggedInUserId);
 }
 
 getUserDetails();

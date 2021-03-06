@@ -289,6 +289,29 @@ label {
     margin: 0px;
 }
 
+.orderH1{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    text-align: left;
+    margin: 0px;
+}
+
+.orderH3{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    text-align: left;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.orderP{
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    text-align: left;
+}
 
 .backButton:hover {
     background-color: #1b293a;

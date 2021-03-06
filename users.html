@@ -43,67 +43,19 @@
                     
                         <div class = "productPageGrid">
                             <div id = "sideBar">
-                                <div class = "sideBar" id = "sidebarContent">
-                                    <h1>OPTIONS_</h1>
-                                    <button class = "clickedButton" disabled>ACCOUNT_SETTINGS_</button>
-                                    <button class = "sideBarButton" onclick = "loadOrderHistoryPage()">ORDER_HISTORY</button>
-                                    <button class = "sideBarButton" onclick = "signOut()">SIGN_OUT_</button>
-                                </div>
                             </div>
         
                             <div id = "content">
-                                <h1 class = "inPageHeader" style = "text-align: left;" id = "pageTitle">ACCOUNT_SETTINGS</h1>
+                                <h1 class = "inPageHeader" style = "text-align: left;" id = "pageTitle">BASKET_</h1>
                                 <div class = "accountSettingsGrid" id = "accountSettingsGrid"> 
 
-                                    <!--Change email form-->
-                                    <form id = "changeUserEmail" class = "accountSettingsGridItem">
-                                        <h2>Change Email</h2>
-                                        <p id = "currentEmail"></p>
-                                        <label for = "newEmail"> New Email Address </label>
-                                        <input type = "text" id = "newEmail" name = "newEmail">
-                                        <button class = "sideBarButton" style = "font-weight: normal;" onclick = "changeEmail()"> Change </button>
-                                    </form>
-
-                                    <!--Change Phone Number form-->
-                                    <form id = "newUsername" class = "accountSettingsGridItem">
-                                        <h2>Change Phone Number</h2>
-                                        <p id = "currentPhone"></p>
-                                        <label for = "newPhone"> New Phone Number </label>
-                                        <input type = "text" id = "newPhone" name = "newPhone">
-                                        <button class = "sideBarButton" style = "font-weight: normal;" onclick = "changePhone()"> Change </button>
-                                    </form>
-
-                                    <form id = "changeAddress" class = "accountSettingsGridItem">
-                                        <h2>Change Address</Address></h2>
-                                        <p id = "currentAdd"></p>
-                                        <label for = "newAdd"> New Address </label>
-                                        <input type = "text" id = "newAdd" name = "newAdd">
-                                        <label for = "newPost"> New Post Code </label>
-                                        <input type = "text" id = "newPost" name = "newPost">
-                                        <button class = "sideBarButton" style = "font-weight: normal;" onclick = "changeAddress()"> Change </button>
-                                    </form>
-                                                                        
-                                    <!--Change password form-->
-                                    <form id = "changePassword" class = "accountSettingsGridItem">
-                                        <h2>Change Password</h2>
-                                        <label for = "currPass"> Current Password </label>
-                                        <input type = "text" id = "currPass" name = "currPass">
-                                        <label for = "newPass"> New Password </label>
-                                        <input type = "text" id = "newPass" name = "newPass">
-                                        <label for = "confNewPass"> Confirm New Password </label>
-                                        <input type = "text" id = "confNewPass" name = "confNewPass">
-                                        <button class = "sideBarButton" style = "font-weight: normal;" onclick = "changePassword()"> Change </button>
-                                    </form>
-
-                                    <!--Delete user form-->
-                                    <form id = "deleteUser" class = "accountSettingsGridItem" style = "background-color: red;">
-                                        <h2>Delete Acccount &amp; Data</h2>
-                                        <label for = "usrName"> Username </label>
-                                        <input type = "text" id = "usrName" name = "usrName">
-                                        <label for = "password"> Password </label>
-                                        <input type = "text" id = "password" name = "password">
-                                        <button class = "sideBarButton" style = "font-weight: normal;" onclick = "deleteAccount()"> Delete </button>
-                                    </form>
+                                    <div class = "accountSettingsGridItem">
+                                        <h1 class = "orderH1">ITEMS:</h1>
+                                        <p>1 x QWE®TY Original, Black | £40</p>
+                                        <p>2 x QWE®TY Red Hat, White | £125</p>
+                                        <button class = "navButton">PAY_NOW_</button>
+                                        <p style = "color:red;" id = "userInformer"></p>
+                                    </div>
 
                                 </div>
                             </div>
