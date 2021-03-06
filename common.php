@@ -20,7 +20,7 @@ function outputHTMLHeader($pageTitle){//Function to print the HTML headder for a
 }
 
 function pageHeader($page, $user){//function for page header & navigation bar
-    echo'
+    echo'       
                 <div class = "headerGrid" id = "header">
                 <div class = "logoSpace">
                     <img src = "Assets\logo-white.png" class = "logo">                  

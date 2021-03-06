@@ -28,7 +28,8 @@
 
 <?php
     //Script for loading products
-    echo'       <script>
+    echo'       <script src = "JavaScript\basketFunctionality.js"></script>
+                <script>
                     let JSONs = \''.$jsonStr.'\';                    
                     let grid = document.getElementById("singleItem");
                     if (JSONs === ""){
@@ -46,7 +47,7 @@
                                 \'<h1>\'+ product.shirtName +\' - \'+ product.colour +\'</h1>\' +
                                 \'<p>\'+ product.description +\'</p>\' +
                                 \'<h2>£\'+ product.price +\'</h2>\' +
-                                \'<button>Add to Basket</button>\' +
+                                \'<button onclick = addToBasket("\'+ product._id +\'")>Add to Basket</button>\' +
                             \'</div>\' +
                             \'<div style = "background-color: #00000000;"></div>\'; 
                     }

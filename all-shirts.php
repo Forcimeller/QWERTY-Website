@@ -53,7 +53,7 @@
                                 \'<h1>\'+ products[i].shirtName +\' - \'+ products[i].colour +\'</h1>\' +
                                 \'<p>\'+ products[i].description +\'</p>\' +
                                 \'<h2>£\'+ products[i].price +\'</h2>\' +
-                                \'<button>Add to Basket</button>\' +
+                                \'<button onclick = "addToBasket(+ products[i]._id +)">Add to Basket</button>\' +
                             \'</div>\n\'; 
                         }
                     }
@@ -163,7 +163,7 @@
                                 \'<h1>\'+ shirts[i].shirtName +\' - \'+ shirts[i].colour +\'</h1>\' +
                                 \'<p>\'+ shirts[i].description +\'</p>\' +
                                 \'<h2>£\'+ shirts[i].price +\'</h2>\' +
-                                \'<button>Add to Basket</button>\' +
+                                \'<button onclick = "addToBasket(+ shirts[i]._id +)">Add to Basket</button>\' +
                             \'</div>\n\'; 
                         }
                     }
