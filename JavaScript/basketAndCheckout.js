@@ -45,19 +45,11 @@ function checkout(){
     }else if(sessionStorage.loggedInUserId === undefined || sessionStorage.loggedInUserId === ""){
         document.getElementById("userInformer").innerHTML = "You <i>MUST</i> sign in to checkout."
     }else{
-        let productString = "["
-
-        for(let i = 0; i < basket.BasketItems.length; i++){
-            productString += JSON.stringify(basket.BasketItems[i]) + ","
-        }
-
-        productString += "]"
-
         let now = new Date();
         let dateString = now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
         let timeString = now.getHours() + ":" + now.getMinutes();
 
-        storeTransaction(sessionStorage.loggedInUserId, dateString, timeString, productString, subtotal, "Order Received", "UNAVAILABLE")
+        storeTransaction(sessionStorage.loggedInUserId, dateString, timeString, JSON.stringify(basket.BasketItems), subtotal, "Order Received", "UNAVAILABLE")
     }
 }
 

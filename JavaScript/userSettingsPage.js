@@ -299,6 +299,7 @@ function getUserOrder(){
             //Get data from server
             let responseData = request.responseText;
             userOrderJSON = responseData;
+            console.log(userOrderJSON)
         }else
             alert("Error communicating with server: " + request.status);
 
@@ -311,6 +312,7 @@ function getUserOrder(){
     //Send request
     request.send("id=" + sessionStorage.loggedInUserId);
 }
+
 
 getUserDetails();
 fillSettingsPage();
