@@ -30,7 +30,7 @@ function pageHeader($page, $user){//function for page header & navigation bar
                     <form action = "search-results.php" method = "GET">
                         <input type = "text" name = "term" placeholder = "SEARCH...">
                     </form>
-                    <div id = "basketStatus">
+                    <div id = "basketStatus" onclick = \'location.href = "basket.php"\'>
                         <img src = "Assets\Basket.png" height = 30px style = "padding: 10px;">
                     </div>
                     

@@ -47,7 +47,7 @@
                                 \'<h1>\'+ product.shirtName +\' - \'+ product.colour +\'</h1>\' +
                                 \'<p>\'+ product.description +\'</p>\' +
                                 \'<h2>£\'+ product.price +\'</h2>\' +
-                                \'<button onclick = addToBasket("\'+ product._id +\'")>Add to Basket</button>\' +
+                                \'<button onclick = addToBasket("\'+ product._id +\'") id = "addButton">Add to Basket</button>\' +
                             \'</div>\' +
                             \'<div style = "background-color: #00000000;"></div>\'; 
                     }

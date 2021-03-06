@@ -29,7 +29,7 @@ if($email != "" && $address != "" && $password != ""){//Check query parameters
         "usrPasswd" =>$password
      ];
     
-    //Add the new product to the database
+    //Add the new customer to the database
     $insertResult = $db->CustomerUsers->insertOne($dataArray);
     
     //Output message confirming registration
